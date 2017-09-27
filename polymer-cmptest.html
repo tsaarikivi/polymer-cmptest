@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="polymer-cmptest">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `polymer-cmptest`
+     * Teros testing component
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PolymerCmptest extends Polymer.Element {
+      static get is() { return 'polymer-cmptest'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'polymer-cmptest'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PolymerCmptest.is, PolymerCmptest);
+  </script>
+</dom-module>
